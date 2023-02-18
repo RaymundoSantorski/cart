@@ -17,3 +17,30 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.cart_container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(50, 50, 50, 0.4);
+    z-index: 10;
+}
+
+.cart_panel{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background-color: white;
+}
+
+.cart_panel::after{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    content: 'X';
+    right: -20px;
+    top: -20px;
+}
