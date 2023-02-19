@@ -46,6 +46,8 @@ Las funciones listadas se irán tachando al empezar a trabajar en ellas y al fin
 
 Avance actual [aqui](https://raymundosantorski.github.io/cart/).
 
-![Imagen de muestra con el modal de carrito cerrado](./screenshot1.png)
-
-![Imagen de muestra con el modal de carrito abierto](./screenshot2.png)
+Con el carrito cerrado
+    ![Imagen de muestra con el modal de carrito cerrado](./screenshot1.png)
+    
+Con el carrito abierto
+    ![Imagen de muestra con el modal de carrito abierto](./screenshot2.png)
