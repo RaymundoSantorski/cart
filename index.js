@@ -14,6 +14,11 @@ const outClick = (e) =>{
     if(!e.target.classList.contains('cart_panel')) hideCart();
 }
 
+const handleEscape = (e) => {
+    if(e.key === 'Escape') hideCart();
+}
+
 closeButton.addEventListener('click', hideCart);
 cartButton.addEventListener('click', showCart);
 cartContainer.addEventListener('click', outClick);
+document.addEventListener('keyup', handleEscape);
