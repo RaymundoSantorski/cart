@@ -10,5 +10,10 @@ const showCart = () => {
     cartContainer.classList.remove('hide');
 }
 
+const outClick = (e) =>{
+    if(!e.target.classList.contains('cart_panel')) hideCart();
+}
+
 closeButton.addEventListener('click', hideCart);
 cartButton.addEventListener('click', showCart);
+cartContainer.addEventListener('click', outClick);
