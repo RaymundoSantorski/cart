@@ -20,7 +20,7 @@
 
 **Funciones por añadir:**
 
-    [ ] Botón de agregar al carrito en cada tarjeta
+    [X] Botón de agregar al carrito en cada tarjeta
 
     [ ] Botón de eliminar del carrito si es que ya se encuentra en el
 
