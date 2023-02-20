@@ -1,6 +1,15 @@
 const closeButton = document.getElementById('close_button');
 const cartContainer = document.querySelector('.cart_container');
 const cartButton = document.querySelector('.cart_button');
+const cards = document.querySelectorAll('.product_card');
+
+cards.forEach(card => {
+    card.innerHTML += `
+        <button data-target="${card.dataset}" class="button">Agregar al carrito</button>
+    `;
+});
+
+const buttons = document.querySelectorAll('.button');
 
 const hideCart = () => {
     cartContainer.classList.add('hide');
