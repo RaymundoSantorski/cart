@@ -50,6 +50,7 @@ const handleRemoveClick = (id) => {
     const cartItems = JSON.parse(localStorage.getItem('cart'));
     const filteredItems = cartItems.filter(item => item.id !== id);
     localStorage.setItem('cart', JSON.stringify(filteredItems));
+    window.location.reload();
 }
 
 const handleAddClick = (id) => {
