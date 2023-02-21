@@ -49,7 +49,7 @@ const initilizeCart = () => {
                             id="cartRemoveButton"
                         >Eliminar del carrito</button>
                     </div>
-                </div>
+                f</div>
             </div>
         `;
     });
