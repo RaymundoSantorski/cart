@@ -59,10 +59,12 @@ const handleAddClick = (id) => {
 }
 
 const hideCart = () => {
+    history.replaceState({}, null, '/');
     cartContainer.classList.add('hide');
 }
 
 const showCart = () => {
+    window.location.hash = 'cart';
     cartContainer.classList.remove('hide');
 }
 
