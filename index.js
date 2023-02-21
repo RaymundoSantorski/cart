@@ -45,6 +45,12 @@ const initilizeCart = () => {
     cartPanel.innerHTML = html;
 }
 
+const handleRemoveClick = (id) => {
+    const cartItems = JSON.parse(localStorage.getItem('cart'));
+    const filteredItems = cartItems.filter(item => item.id !== id);
+    localStorage.setItem('cart', JSON.stringify(filteredItems));
+}
+
 const handleAddClick = (id) => {
     const cart = JSON.parse(localStorage.getItem('cart'));
     if(cart.some(value => value.id === id)) return;
