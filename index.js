@@ -24,12 +24,31 @@ const initilize = () => {
         `;
     });
     products.innerHTML += html;
+    initilizeCart();
+}
+
+const initilizeCart = () => {
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    let html = '';
+    cart.forEach(item => {
+        const movie = spidermanMovies.filter(movie => movie.id === item.id)[0];
+        html += `
+            <div class="cart_item" id="${movie.id}">
+                <div class="cart_item_image">
+                    <img src="${movie.img}" alt="${movie.img_alt}">
+                </div>
+                <span>${item.cant}</span>
+                <button onClick="handleRemoveClick(${movie.id})">Eliminar del carrito</button>
+            </div>
+        `;
+    });
+    cartPanel.innerHTML = html;
 }
 
 const handleAddClick = (id) => {
     const cart = JSON.parse(localStorage.getItem('cart'));
     if(cart.some(value => value.id === id)) return;
-    const cartItems = [...JSON.parse(localStorage.getItem('cart')), {id, cant: 1}];
+    const cartItems = [...cart, {id, cant: 1}];
     localStorage.setItem('cart', JSON.stringify(cartItems));
 }
 
