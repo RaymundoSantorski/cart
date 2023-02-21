@@ -27,6 +27,8 @@ const initilize = () => {
 }
 
 const handleAddClick = (id) => {
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    if(cart.some(value => value.id === id)) return;
     const cartItems = [...JSON.parse(localStorage.getItem('cart')), {id, cant: 1}];
     localStorage.setItem('cart', JSON.stringify(cartItems));
 }
