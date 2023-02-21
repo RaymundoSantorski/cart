@@ -24,6 +24,8 @@
 
     - Almacena el carrito en localstorage para recuperarlo después 
 
+    - Por cada item en el carrito poner botón de eliminar
+
 **Funciones por añadir:**
 
     [X] Botón de eliminar del carrito si es que ya se encuentra en el
