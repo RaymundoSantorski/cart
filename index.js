@@ -24,6 +24,7 @@ const initilize = () => {
         `;
     });
     products.innerHTML += html;
+    if(window.location.hash === '#cart') showCart();
     initilizeCart();
 }
 
@@ -59,6 +60,7 @@ const handleAddClick = (id) => {
 }
 
 const hideCart = () => {
+    console.log('Aqui se cerro');
     history.replaceState({}, null, '/');
     cartContainer.classList.add('hide');
 }
@@ -69,7 +71,12 @@ const showCart = () => {
 }
 
 const outClick = (e) =>{
-    if(!e.target.classList.contains('cart_panel')) hideCart();
+    const parentList = [...e.target.parentNode.classList];
+    console.log();
+    if( 
+        !e.target.classList.contains('cart_panel')
+        && !parentList.some(parentClass => parentClass.includes('cart_item'))
+    ) hideCart();
 }
 
 const handleEscape = (e) => {
