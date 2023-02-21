@@ -1,4 +1,4 @@
-[
+const spidermanMovies = [
     {
         "id": 0,
         "img": "./images/spiderman_1.png",
