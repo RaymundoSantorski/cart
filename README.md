@@ -18,11 +18,15 @@
 
     - También se puede cerrar el modal haciendo click en el fondo y presionando la tecla Escape
 
+    - Botón de agregar al carrito en cada tarjeta
+
+    - Carga la información para las tarjetas desde un archivo javascript externo simulando asi la base de datos
+
+    - Almacena el carrito en localstorage para recuperarlo después 
+
 **Funciones por añadir:**
 
-    [X] Botón de agregar al carrito en cada tarjeta
-
-    [ ] Botón de eliminar del carrito si es que ya se encuentra en el
+    [X] Botón de eliminar del carrito si es que ya se encuentra en el
 
     [ ] Botones para editar la cantidad que se desea comprar, directo en la tarjeta del producto
 
@@ -30,19 +34,13 @@
 
     [ ] Listar productos que están en el carrito en el modal
 
-    [ ] Almacenar el carrito en localstorage para recuperarlo después 
-
     [ ] En el modal poner botón de vaciar carrito
-
-    [ ] Por cada item en el carrito poner botón de eliminar
 
     [ ] Por cada item en el carrito poner botones para editar la cantidad deseada
 
     [ ] Calcular y mostrar el monto total en el modal del carrito
 
     [ ] Modal de producto, para al hacer click en una tarjeta poder ampliarla sin salirse de la página y poder ver más detalles
-
-    [X] Cargar la información para las tarjetas desde un archivo json simulando asi la base de datos
 
 Las funciones listadas se irán tachando al empezar a trabajar en ellas y al finalizarlas se pasarán al listado de funciones listas, al principio
 
