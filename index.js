@@ -19,7 +19,7 @@ buttons.forEach(button => {
 });
 
 function handleAddClick(e){
-    const cartItems = [...JSON.parse(localStorage.getItem('cart')), this.dataset.target];
+    const cartItems = [...JSON.parse(localStorage.getItem('cart')), {id: this.dataset.target, cant: 1}];
     localStorage.setItem('cart', JSON.stringify(cartItems));
 }
 
@@ -27,10 +27,10 @@ const showCartItems = () => {
     const cartItems = JSON.parse(localStorage.getItem('cart'));
     let html = '';
     cartItems.forEach(item => {
-        const prod = document.getElementById(item);
-        console.log(prod.dataset);
+        const prod = document.getElementById(item.id);
+        const image = prod.getElementsByTagName('img').item(0).cloneNode();
+        cartPanel.append(image);
     });
-    cartPanel.innerHTML += html;
 }
 
 const hideCart = () => {
@@ -39,6 +39,7 @@ const hideCart = () => {
 
 const showCart = () => {
     cartContainer.classList.remove('hide');
+    showCartItems();
 }
 
 const outClick = (e) =>{
@@ -53,5 +54,3 @@ closeButton.addEventListener('click', hideCart);
 cartButton.addEventListener('click', showCart);
 cartContainer.addEventListener('click', outClick);
 document.addEventListener('keyup', handleEscape);
-
-showCartItems();
