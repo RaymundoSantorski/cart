@@ -19,14 +19,15 @@ const initilize = () => {
                     ${movie.description}
                 </span>
             </div>
+            <button onClick="handleAddClick(${movie.id})">Agregar al carrito</button>
         </div>
         `;
     });
     products.innerHTML += html;
 }
 
-const handleAddClick = (e) => {
-    const cartItems = [...JSON.parse(localStorage.getItem('cart')), {id: this.dataset.target, cant: 1}];
+const handleAddClick = (id) => {
+    const cartItems = [...JSON.parse(localStorage.getItem('cart')), {id, cant: 1}];
     localStorage.setItem('cart', JSON.stringify(cartItems));
 }
 
@@ -36,7 +37,6 @@ const hideCart = () => {
 
 const showCart = () => {
     cartContainer.classList.remove('hide');
-    showCartItems();
 }
 
 const outClick = (e) =>{
