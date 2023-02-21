@@ -38,8 +38,18 @@ const initilizeCart = () => {
                 <div class="cart_item_image">
                     <img src="${movie.img}" alt="${movie.img_alt}">
                 </div>
-                <span>${item.cant}</span>
-                <button onClick="handleRemoveClick(${movie.id})">Eliminar del carrito</button>
+                <div class="cart_item_nonimage">
+                    <div class="cart_item_info">
+                        <span>${item.cant}</span>
+                    </div>
+                    <div class="cart_item_buttons">
+                        <button 
+                            onClick="handleRemoveClick(${movie.id})"
+                            class="button"
+                            id="cartRemoveButton"
+                        >Eliminar del carrito</button>
+                    </div>
+                </div>
             </div>
         `;
     });
@@ -62,7 +72,6 @@ const handleAddClick = (id) => {
 }
 
 const hideCart = () => {
-    console.log('Aqui se cerro');
     history.replaceState({}, null, '/');
     cartContainer.classList.add('hide');
 }
