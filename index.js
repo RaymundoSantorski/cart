@@ -2,11 +2,27 @@ const closeButton = document.getElementById('close_button');
 const cartContainer = document.querySelector('.cart_container');
 const cartPanel = document.querySelector('.cart_panel');
 const cartButton = document.querySelector('.cart_button');
+const products = document.querySelector('.products');
 
 localStorage.setItem('cart', localStorage.getItem('cart') || JSON.stringify([]));
 
 const initilize = () => {
-    console.log(spidermanMovies);
+    let html = '';
+    spidermanMovies.forEach(movie => {
+        html += `
+        <div class="product_card" id="${movie.id}">
+            <div class="card_image">
+                <img src="${movie.img}" alt="${movie.img_alt}">
+            </div>
+            <div class="card_description">
+                <span>
+                    ${movie.description}
+                </span>
+            </div>
+        </div>
+        `;
+    });
+    products.innerHTML += html;
 }
 
 const handleAddClick = (e) => {
