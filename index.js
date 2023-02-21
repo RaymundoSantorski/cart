@@ -58,6 +58,7 @@ const handleAddClick = (id) => {
     if(cart.some(value => value.id === id)) return;
     const cartItems = [...cart, {id, cant: 1}];
     localStorage.setItem('cart', JSON.stringify(cartItems));
+    window.location.reload();
 }
 
 const hideCart = () => {
