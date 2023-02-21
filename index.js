@@ -1,5 +1,6 @@
 const closeButton = document.getElementById('close_button');
 const cartContainer = document.querySelector('.cart_container');
+const cartPanel = document.querySelector('.cart_panel');
 const cartButton = document.querySelector('.cart_button');
 const cards = document.querySelectorAll('.product_card');
 
@@ -22,6 +23,16 @@ function handleAddClick(e){
     localStorage.setItem('cart', JSON.stringify(cartItems));
 }
 
+const showCartItems = () => {
+    const cartItems = JSON.parse(localStorage.getItem('cart'));
+    let html = '';
+    cartItems.forEach(item => {
+        const prod = document.getElementById(item);
+        console.log(prod.dataset);
+    });
+    cartPanel.innerHTML += html;
+}
+
 const hideCart = () => {
     cartContainer.classList.add('hide');
 }
@@ -42,3 +53,5 @@ closeButton.addEventListener('click', hideCart);
 cartButton.addEventListener('click', showCart);
 cartContainer.addEventListener('click', outClick);
 document.addEventListener('keyup', handleEscape);
+
+showCartItems();
