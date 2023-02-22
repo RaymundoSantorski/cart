@@ -44,6 +44,8 @@
 
     [ ] Modal de producto, para al hacer click en una tarjeta poder ampliarla sin salirse de la página y poder ver más detalles
 
+    [ ] Hacer que el panel de carrito tenga scroll si hay muchos items
+
 Las funciones listadas se irán tachando al empezar a trabajar en ellas y al finalizarlas se pasarán al listado de funciones listas, al principio
 
 Avance actual [aqui](https://raymundosantorski.github.io/cart/).
